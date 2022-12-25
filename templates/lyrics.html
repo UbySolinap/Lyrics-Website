@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include "header.html" %}
+</head>
+<body>
+  <section class="colored-section" id="lyrics-result">
+    <div class="container">
+      <div class="row">
+        <div class="lyrics">
+          <h1 class="track-title">{{ track }}</h1>
+          <h3 class="track-artist">by {{ artist }}</h3>
+          {% for lyric in results %}
+          <p class="lyrics-text">
+            {{ lyric }}
+          </p>
+          {% endfor %}
+          <p class="lyrics-copyright">{{ cr.lyrics_copyright }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% include "footer.html" %}

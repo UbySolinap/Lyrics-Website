@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "header.html" %}
+</head>
+<body>
+    <section class="colored-section" id="#artist-albums">
+        <div class="container">
+            <div class="row">
+                <div class="album-div" style="width:auto; margin:0 auto;">
+                    <h1 class="album-header">Albums:</h1>
+                    <ul class="list-group album-list">
+                        {% for album in albums %}
+                        <a href='{{ url_for("songs", index=album.album.album_id) }}' class="list-group-item">{{ album.album.album_name }}</a>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% include "footer.html" %}

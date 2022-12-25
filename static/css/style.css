@@ -1,0 +1,171 @@
+/* Section */
+.colored-section {
+    padding-top: 100px;
+    background-color: #BFEAF5;
+    padding-bottom: 80px;
+    font-family: 'Source Sans Pro';
+}
+
+/* Navbar Section */
+nav {
+    font-family: 'Source Sans Pro';
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+}
+
+.nav-search {
+    width: 400px;
+    height: 35px;
+    border-radius:25px;
+    border: solid 2px;
+    padding-left: 10px;
+}
+
+.search button {
+    border: none;
+    background-color: #EAFDFC;
+}
+
+/* Home section */
+#search-lyrics {
+    text-align: left;
+}
+
+.intro {
+    padding-bottom: 40px;
+}
+
+.intro-title {
+    padding-bottom: 15px;
+    font-weight: 700;
+}
+
+.intro-sub {
+    line-height: 1.5;
+    font-size: 20px;
+}
+
+.top-title {
+    font-weight: 700;
+    padding-bottom: 30px;
+}
+
+.search-bar input[type=text] {
+    border: solid 1px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.list-item-index {
+    width: 85%;
+}
+
+/* Search Section */
+
+.search-title {
+    padding-bottom: 20px;
+    font-weight: 700;
+}
+
+.search-div {
+    padding-bottom: 10px;
+}
+
+.search-list {
+    overflow-y: scroll;
+    height: 411px;
+}
+
+.search-header {
+    padding-bottom: 10px;
+    font-weight: 700;
+}
+
+/* Lyrics section */
+#lyrics-result {
+    text-align: center;
+}
+
+.lyrics-text {
+    line-height: 1.5;
+}
+
+.track-title {
+    font-weight: 700;
+    padding-bottom: 5px;
+}
+
+.track-artist {
+    font-weight: 700;
+    padding-bottom: 40px;
+}
+
+.lyrics-copyright {
+    font-weight: 700;
+    padding-top: 30px;
+}
+
+/* Artist Album Section */
+
+.album-header {
+    padding-bottom: 10px;
+    font-weight: 700;
+}
+
+.album-list {
+    overflow-y: scroll;
+    height: 411px;
+    width: 465px;
+}
+
+/* Album songs section */
+.songs-header {
+    padding-bottom: 10px;
+    font-weight: 700;
+}
+
+.music-lists {
+    overflow-y: scroll;
+    height: 411px;
+    width: 465px;
+}
+
+/* Footer Section */
+footer {
+    font-family: 'Source Sans Pro';
+    background-color: #82AAE3;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.footer-div {
+    text-align: center;
+}
+
+.icons {
+    padding: 10px 20px;
+    color: #EAFDFC;
+}
+
+.icons:hover {
+    color: #BFEAF5;
+}
+
+.copyright {
+    margin-top: 20px;
+}
+
+.footer-hr {
+    margin: auto;
+    width: 20%;
+    margin-top: 20px;
+}
+
+.footer-logo {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 20px;
+}

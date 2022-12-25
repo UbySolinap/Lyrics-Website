@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "header.html" %}
+</head>
+<body>
+    <section class="colored-section" id="search-result">
+        <div class="container">
+            <div class="row">
+                <h1 class="search-title">Search Results:</h1>
+                <div class="search-div col-lg-4">
+                    <h2 class="search-header">Songs:</h2>
+                    <ul class="list-group search-list">
+                        {% for song in tracks %}
+                        <a href='{{ url_for("lyrics", index=song.track.track_id, track=song.track.track_name.split(" (")[0], artist=song.track.artist_name) }}' class="list-group-item list-item-search-songs">{{ song.track.track_name.split(" (")[0] }} - {{ song.track.artist_name }}</a>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="search-div col-lg-4">
+                    <h2 class="search-header">Artists:</h2>
+                    <ul class="list-group search-list">
+                        {% for artist in artists %}
+                        <a href='{{ url_for("artist", index=artist.artist.artist_id, artist=artist.artist.artist_name) }}' class="list-group-item list-item-search">{{ artist.artist.artist_name.split(" feat.")[0] }}</a>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="search-div col-lg-4">
+                    <h2 class="search-header">Lyrics:</h2>
+                    <ul class="list-group search-list">
+                        {% for lyric in lyrics %}
+                        <a href='{{ url_for("lyrics", index=lyric.track.track_id, track=lyric.track.track_name.split(" (")[0], artist=lyric.track.artist_name) }}' class="list-group-item list-item-search">{{ lyric.track.track_name }}</a>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% include "footer.html" %}

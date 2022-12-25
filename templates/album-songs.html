@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "header.html" %}
+</head>
+<body>
+    <section class="colored-section">
+        <div class="container">
+            <div class="row">
+                <div class="songs-div" style="width:auto; margin:0 auto;">
+                    <h1 class="songs-header">Songs:</h1>
+                    <ul class="list-group music-lists">
+                        {% for song in songs %}
+                        <a href='{{ url_for("lyrics", index=song.track.track_id, track=song.track.track_name.split(" (")[0], artist=song.track.artist_name) }}' class="list-group-item">{{ song.track.track_name }}</a>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% include "footer.html" %}

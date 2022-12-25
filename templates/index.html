@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "header.html" %}
+    {% import "bootstrap/wtf.html" as wtf %}
+</head>
+<body>
+    <section class="colored-section" id="search-lyrics">
+        <div class="container">
+            <div class="row">
+                <div class="intro col-lg-4">
+                    <h1 class="intro-title">Welcome to King Lyrics</h1>
+                    <p class="intro-sub">Search for any song from all genres, artists and ages.
+                    The lyrics of the song will be provided from our large and legal collections of songs.</p>
+                    <div class="search-bar" style="width: 80%">
+                        {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+                    </div>
+                </div>
+                <div class="top-artists col-lg-4">
+                    <h2 class="top-title">Top Artists in USA</h2>
+                    <ul class="list-group">
+                        {% for artist in artists %}
+                        <a href='{{ url_for("artist", index=artist.artist.artist_id, artist=artist.artist.artist_name) }}' class="list-group-item list-item-index">{{ artist.artist.artist_name.split(" feat.")[0] }}</a>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="top-songs col-lg-4">
+                    <h2 class="top-title">Top Songs in USA</h2>
+                    <ul class="list-group">
+                        {% for song in songs %}
+                        <a href='{{ url_for("lyrics", index=song.track.track_id, track=song.track.track_name.split(" (")[0], artist=song.track.artist_name) }}' class="list-group-item list-item-index">{{ song.track.track_name.split(" (")[0] }} - {{ song.track.artist_name }}</a>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% include "footer.html" %}
