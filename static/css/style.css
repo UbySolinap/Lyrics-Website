@@ -137,8 +137,8 @@ nav {
 footer {
     font-family: 'Source Sans Pro';
     background-color: #82AAE3;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
 }
 
 .footer-div {
@@ -147,7 +147,7 @@ footer {
 
 .icons {
     padding: 10px 20px;
-    color: #EAFDFC;
+    color: #3B444B;
 }
 
 .icons:hover {
@@ -167,5 +167,5 @@ footer {
 .footer-logo {
     width: 140px;
     height: 140px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
